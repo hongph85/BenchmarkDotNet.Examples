@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 namespace BenchmarkDotNet.Examples
 {
     [MemoryDiagnoser]
-    public class SpanVsStringBenchMark
+    public class SpanVsSubStringBenchMark
     {
         string input = "123,456";
-        public SpanVsStringBenchMark()
+        public SpanVsSubStringBenchMark()
         {
         }
 
         [Benchmark(Baseline = true)]
-        public void UsingString()
+        public void UsingSubString()
         {
             int commaPos = input.IndexOf(',');
             int first = int.Parse(input.Substring(0, commaPos));
