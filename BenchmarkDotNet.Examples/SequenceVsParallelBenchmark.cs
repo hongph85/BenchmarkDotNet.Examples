@@ -11,7 +11,6 @@ using System.Threading.Tasks;
 namespace BenchmarkDotNet.Examples
 {
     [MemoryDiagnoser]
-    [SimpleJob(RunStrategy.ColdStart, launchCount: 1)]
     public class SequenceVsParallelBenchmark
     {
         private readonly Consumer consumer = new Consumer();
